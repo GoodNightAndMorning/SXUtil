@@ -7,7 +7,8 @@
 //
 
 #import "ViewController.h"
-
+#import "Test.h"
+#import "SXStringCategory.h"
 @interface ViewController ()
 
 @end
@@ -16,7 +17,18 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    UILabel *lb = [[UILabel alloc] initWithFrame:CGRectMake(20, 100, self.view.frame.size.width - 40, 30)];
+    lb.font = [UIFont systemFontOfSize:16];
+    lb.textColor = UIColor.orangeColor;
+    [self.view addSubview:lb];
+    
+    NSString *str = @"积分外面佛哦我就没干嘛";
+    
+    lb.attributedText = [str addAttribute:^(SXAttribute *attribute) {
+        attribute.add(NSForegroundColorAttributeName, UIColor.redColor, NSMakeRange(0, 5));
+        attribute.add(NSFontAttributeName, [UIFont systemFontOfSize:20], NSMakeRange(0, 5));
+    }];
 }
 
 

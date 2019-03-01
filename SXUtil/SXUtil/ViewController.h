@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
 
+extern CGFloat const Width;
+
+@interface ViewController : UIViewController
 
 @end
 

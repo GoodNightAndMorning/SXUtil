@@ -8,15 +8,11 @@
 
 #import "ViewController.h"
 #import "Test.h"
-#import "SXStringCategory.h"
-#import "UITextField+Category.h"
-#import <objc/objc.h>
-#import <objc/runtime.h>
-#import "UIImage+Category.h"
+#import "SXCategoryHeader.h"
 @interface ViewController ()
 
 @end
-
+CGFloat const Width = 10;
 @implementation ViewController
 
 - (void)viewDidLoad {
@@ -50,7 +46,6 @@
     imageView.image = [[UIImage imageNamed:@"pic"] circle];
     
     [self.view addSubview:imageView];
-    
     
 //    [tf removeFromSuperview];
 }

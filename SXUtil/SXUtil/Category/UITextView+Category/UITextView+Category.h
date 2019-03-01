@@ -15,5 +15,19 @@
  @param number number
  */
 -(void)limitNumberOfWords:(int)number;
+
+/**
+ 设置placeholder
+
+ @param placeholder placeholder
+ */
+-(void)setPlaceholder:(NSString *)placeholder;
+
+/**
+ 添加右下角计数UILabel
+
+ @param number 计数总数
+ */
+-(void)setNumberLabelWithNumber:(int)number;
 @end
 

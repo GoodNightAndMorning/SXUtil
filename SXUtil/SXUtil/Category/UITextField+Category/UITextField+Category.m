@@ -48,6 +48,9 @@
 #pragma mark - 键盘弹出自适应布局
 - (void)keyboardWillShow:(NSNotification *)aNotification
 {
+    if (!self.isFirstResponder) {
+        return;
+    }
     NSValue *value = [[aNotification userInfo] objectForKey:@"UIKeyboardFrameEndUserInfoKey"];
     float keyEnd_y = [value CGRectValue].origin.y;
     float animationDuration = [[aNotification userInfo][@"UIKeyboardAnimationDurationUserInfoKey"] floatValue];
@@ -63,14 +66,18 @@
     viewFrame.origin.y = (keyEnd_y - 10) - CGRectGetMaxY(screenFrame);
     
     [UIView animateWithDuration:animationDuration animations:^{
-        self.superview.frame = viewFrame;
+        [UIApplication sharedApplication].keyWindow.frame = viewFrame;
     }];
 }
 - (void)keyboardWillHide:(NSNotification *)aNotification {
     
+    if (!self.isFirstResponder) {
+        return;
+    }
+    
     float animationDuration = [[aNotification userInfo][@"UIKeyboardAnimationDurationUserInfoKey"] floatValue];
     [UIView animateWithDuration:animationDuration animations:^{
-        self.superview.frame = [[UIScreen mainScreen] bounds];
+        [UIApplication sharedApplication].keyWindow.frame = [[UIScreen mainScreen] bounds];
     }];
 }
 #pragma mark - 键盘顶部添加完成按钮

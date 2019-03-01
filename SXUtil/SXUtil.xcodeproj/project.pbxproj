@@ -18,6 +18,8 @@
 		18A2B75C2227DBAE00E30D35 /* SXAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A2B75B2227DBAE00E30D35 /* SXAttribute.m */; };
 		18A2B75F2227DEAC00E30D35 /* Test.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A2B75E2227DEAC00E30D35 /* Test.m */; };
 		18A2B7622228BD3700E30D35 /* NSString+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A2B7612228BD3700E30D35 /* NSString+Category.m */; };
+		18A2B7672228C1B900E30D35 /* UITextField+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A2B7662228C1B900E30D35 /* UITextField+Category.m */; };
+		18A2B76C2228D45D00E30D35 /* UITextView+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A2B76B2228D45D00E30D35 /* UITextView+Category.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +63,10 @@
 		18A2B7602228BD3700E30D35 /* NSString+Category.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Category.h"; sourceTree = "<group>"; };
 		18A2B7612228BD3700E30D35 /* NSString+Category.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+Category.m"; sourceTree = "<group>"; };
 		18A2B7632228BDBF00E30D35 /* SXStringCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SXStringCategory.h; sourceTree = "<group>"; };
+		18A2B7652228C1B900E30D35 /* UITextField+Category.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITextField+Category.h"; sourceTree = "<group>"; };
+		18A2B7662228C1B900E30D35 /* UITextField+Category.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITextField+Category.m"; sourceTree = "<group>"; };
+		18A2B76A2228D45D00E30D35 /* UITextView+Category.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITextView+Category.h"; sourceTree = "<group>"; };
+		18A2B76B2228D45D00E30D35 /* UITextView+Category.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITextView+Category.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,12 +154,14 @@
 		18A2B7472227CE4700E30D35 /* Category */ = {
 			isa = PBXGroup;
 			children = (
-				18A2B7522227D8B900E30D35 /* NSString+MutableAttributeString */,
+				18A2B7692228D43900E30D35 /* UITextView+Category */,
+				18A2B7642228C19000E30D35 /* UITextField+Category */,
+				18A2B7522227D8B900E30D35 /* NSString+Category */,
 			);
 			path = Category;
 			sourceTree = "<group>";
 		};
-		18A2B7522227D8B900E30D35 /* NSString+MutableAttributeString */ = {
+		18A2B7522227D8B900E30D35 /* NSString+Category */ = {
 			isa = PBXGroup;
 			children = (
 				18A2B7632228BDBF00E30D35 /* SXStringCategory.h */,
@@ -162,7 +170,25 @@
 				18A2B75A2227DBAE00E30D35 /* SXAttribute.h */,
 				18A2B75B2227DBAE00E30D35 /* SXAttribute.m */,
 			);
-			path = "NSString+MutableAttributeString";
+			path = "NSString+Category";
+			sourceTree = "<group>";
+		};
+		18A2B7642228C19000E30D35 /* UITextField+Category */ = {
+			isa = PBXGroup;
+			children = (
+				18A2B7652228C1B900E30D35 /* UITextField+Category.h */,
+				18A2B7662228C1B900E30D35 /* UITextField+Category.m */,
+			);
+			path = "UITextField+Category";
+			sourceTree = "<group>";
+		};
+		18A2B7692228D43900E30D35 /* UITextView+Category */ = {
+			isa = PBXGroup;
+			children = (
+				18A2B76A2228D45D00E30D35 /* UITextView+Category.h */,
+				18A2B76B2228D45D00E30D35 /* UITextView+Category.m */,
+			);
+			path = "UITextView+Category";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -300,7 +326,9 @@
 				18A2B7252227CDF200E30D35 /* main.m in Sources */,
 				18A2B75F2227DEAC00E30D35 /* Test.m in Sources */,
 				18A2B7172227CDF200E30D35 /* AppDelegate.m in Sources */,
+				18A2B7672228C1B900E30D35 /* UITextField+Category.m in Sources */,
 				18A2B75C2227DBAE00E30D35 /* SXAttribute.m in Sources */,
+				18A2B76C2228D45D00E30D35 /* UITextView+Category.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,6 +9,9 @@
 #import "ViewController.h"
 #import "Test.h"
 #import "SXStringCategory.h"
+#import "UITextField+Category.h"
+#import <objc/objc.h>
+#import <objc/runtime.h>
 @interface ViewController ()
 
 @end
@@ -29,7 +32,21 @@
         attribute.add(NSForegroundColorAttributeName, UIColor.redColor, NSMakeRange(0, 5));
         attribute.add(NSFontAttributeName, [UIFont systemFontOfSize:20], NSMakeRange(0, 5));
     }];
+    
+    UITextField *tf = [[UITextField alloc] initWithFrame:CGRectMake(20, [UIScreen mainScreen].bounds.size.height - 100, self.view.frame.size.width - 40, 30)];
+    tf.font = [UIFont systemFontOfSize:16];
+    tf.placeholder = @"请输入";
+    [self.view addSubview:tf];
+    
+    UITextView *tv = [[UITextView alloc] initWithFrame:CGRectMake(20, [UIScreen mainScreen].bounds.size.height - 200, self.view.frame.size.width - 40, 60)];
+    tv.font = [UIFont systemFontOfSize:16];
+    tv.backgroundColor = UIColor.orangeColor;
+    [self.view addSubview:tv];
+    
+//    [tf removeFromSuperview];
 }
 
-
+-(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    [[[UIApplication sharedApplication] keyWindow] endEditing:YES];
+}
 @end

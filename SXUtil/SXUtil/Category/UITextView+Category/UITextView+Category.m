@@ -45,7 +45,10 @@ static const char * Placeholder_Key = "placeholder_key";
     property = [[UILabel alloc] init];
     objc_setAssociatedObject(self, &Placeholder_Key, property, OBJC_ASSOCIATION_RETAIN);
     
-    property.frame = CGRectMake(10, 10, 10, 10);
+    CGFloat x = self.textContainerInset.left;
+    CGFloat y = self.textContainerInset.top;
+    
+    property.frame = CGRectMake(x, y, 10, 10);
     property.font = self.font;
     property.textColor = [UIColor colorWithRed:170.0/255 green:170.0/255 blue:170.0/255 alpha:1];
     property.text = placeholder;
@@ -84,7 +87,11 @@ static const char * Placeholder_Key = "placeholder_key";
     
     [self addSubview:property];
     
+    self.contentInset = UIEdgeInsetsMake(0, 0, size.height + 20, 0);
+    
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(textViewTextDidChange) name:UITextViewTextDidChangeNotification object:nil];
+
+    [self addObserver:self forKeyPath:@"contentOffset" options:NSKeyValueObservingOptionNew context:nil];
 }
 
 #pragma - mark load方法重写
@@ -193,11 +200,21 @@ static const char * Placeholder_Key = "placeholder_key";
 }
 
 -(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
-    //设置font的时候更新placeholderLb的font
+    
     if ([keyPath isEqualToString:@"font"]) {
+        //设置font的时候更新placeholderLb的font
         UILabel *placeholderLb = objc_getAssociatedObject(self, &Placeholder_Key);
         placeholderLb.font = change[@"new"];
         [placeholderLb sizeToFit];
+    }else if ([keyPath isEqualToString:@"contentOffset"]) {
+        //textView的contentOffset.y变化的时候，更新numberLb的frame
+        CGPoint point = CGPointFromString([NSString stringWithFormat:@"%@",change[@"new"]]);
+        
+        UILabel * numberLb = objc_getAssociatedObject(self, &NumberLb_Key);
+        
+        CGSize size = [numberLb.text boundingRectWithSize:CGSizeMake(MAXFLOAT, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:numberLb.font} context:nil].size;
+        
+        numberLb.frame = CGRectMake(numberLb.frame.origin.x, (self.frame.size.height - size.height - 10) + point.y, numberLb.frame.size.width, numberLb.frame.size.height);
     }
 }
 -(void)p_clickFinishBtnAction {
@@ -206,5 +223,6 @@ static const char * Placeholder_Key = "placeholder_key";
 - (void)dealloc {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
     [self removeObserver:self forKeyPath:@"font"];
+    [self removeObserver:self forKeyPath:@"contentOffset"];
 }
 @end

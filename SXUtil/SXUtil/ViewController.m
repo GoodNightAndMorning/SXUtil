@@ -35,7 +35,7 @@ CGFloat const Width = 10;
     tf.placeholder = @"请输入";
     [self.view addSubview:tf];
     
-    UITextView *tv = [[UITextView alloc] initWithFrame:CGRectMake(20, [UIScreen mainScreen].bounds.size.height - 300, self.view.frame.size.width - 40, 150)];
+    UITextView *tv = [[UITextView alloc] initWithFrame:CGRectMake(20, [UIScreen mainScreen].bounds.size.height - 300, 150, 80)];
     [tv setPlaceholder:@"请输入标题"];
     [tv setNumberLabelWithNumber:50];
     tv.font = [UIFont systemFontOfSize:16];

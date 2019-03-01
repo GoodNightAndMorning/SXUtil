@@ -11,7 +11,12 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface UITextField (Category)
-
+/**
+ 限制输入字数
+ 
+ @param number number
+ */
+-(void)limitNumberOfWords:(int)number;
 @end
 
 NS_ASSUME_NONNULL_END

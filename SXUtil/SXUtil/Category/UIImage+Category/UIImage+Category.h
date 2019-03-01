@@ -1,5 +1,5 @@
 //
-//  UITextView+Category.h
+//  UIImage+Category.h
 //  SXUtil
 //
 //  Created by apple on 2019/3/1.
@@ -8,12 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UITextView (Category)
+@interface UIImage (Category)
+
 /**
- 限制输入字数
- 
- @param number number
+ 得到圆形图片
+
+ @return UIImage
  */
--(void)limitNumberOfWords:(int)number;
+-(UIImage *)circle;
 @end
 

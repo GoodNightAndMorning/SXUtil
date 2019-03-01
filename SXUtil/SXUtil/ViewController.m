@@ -12,6 +12,7 @@
 #import "UITextField+Category.h"
 #import <objc/objc.h>
 #import <objc/runtime.h>
+#import "UIImage+Category.h"
 @interface ViewController ()
 
 @end
@@ -42,6 +43,14 @@
     tv.font = [UIFont systemFontOfSize:16];
     tv.backgroundColor = UIColor.orangeColor;
     [self.view addSubview:tv];
+    
+    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(20, 150, 300, 300)];
+    imageView.backgroundColor = UIColor.orangeColor;
+    
+    imageView.image = [[UIImage imageNamed:@"pic"] circle];
+    
+    [self.view addSubview:imageView];
+    
     
 //    [tf removeFromSuperview];
 }

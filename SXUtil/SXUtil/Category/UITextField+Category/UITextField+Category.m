@@ -9,6 +9,24 @@
 #import "UITextField+Category.h"
 #import <objc/runtime.h>
 @implementation UITextField (Category)
+
+/**
+ 限制输入字数
+
+ @param number number
+ */
+-(void)limitNumberOfWords:(int)number{
+    if (self.text.length > number) {
+        UITextRange *markedRange = [self markedTextRange];
+        if (markedRange) {
+            return;
+        }
+        NSRange range = [self.text rangeOfComposedCharacterSequenceAtIndex:number];
+        self.text = [self.text substringToIndex:range.location];
+    }
+}
+
+
 +(void)load {
     Method oldMethod = class_getInstanceMethod([self class], @selector(initWithFrame:));
     Method newMethod = class_getInstanceMethod([self class], @selector(newInitWithFrame:));

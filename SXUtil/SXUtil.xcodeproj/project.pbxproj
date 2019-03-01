@@ -20,6 +20,8 @@
 		18A2B7622228BD3700E30D35 /* NSString+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A2B7612228BD3700E30D35 /* NSString+Category.m */; };
 		18A2B7672228C1B900E30D35 /* UITextField+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A2B7662228C1B900E30D35 /* UITextField+Category.m */; };
 		18A2B76C2228D45D00E30D35 /* UITextView+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A2B76B2228D45D00E30D35 /* UITextView+Category.m */; };
+		18A2B76F2229010900E30D35 /* UIColor+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A2B76E2229010900E30D35 /* UIColor+Category.m */; };
+		18A2B7732229033D00E30D35 /* UIImage+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A2B7722229033D00E30D35 /* UIImage+Category.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +69,10 @@
 		18A2B7662228C1B900E30D35 /* UITextField+Category.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITextField+Category.m"; sourceTree = "<group>"; };
 		18A2B76A2228D45D00E30D35 /* UITextView+Category.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITextView+Category.h"; sourceTree = "<group>"; };
 		18A2B76B2228D45D00E30D35 /* UITextView+Category.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITextView+Category.m"; sourceTree = "<group>"; };
+		18A2B76D2229010900E30D35 /* UIColor+Category.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+Category.h"; sourceTree = "<group>"; };
+		18A2B76E2229010900E30D35 /* UIColor+Category.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Category.m"; sourceTree = "<group>"; };
+		18A2B7712229033D00E30D35 /* UIImage+Category.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+Category.h"; sourceTree = "<group>"; };
+		18A2B7722229033D00E30D35 /* UIImage+Category.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Category.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +160,8 @@
 		18A2B7472227CE4700E30D35 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				18A2B7742229034500E30D35 /* UIImage+Category */,
+				18A2B7702229010F00E30D35 /* UIColor+Category */,
 				18A2B7692228D43900E30D35 /* UITextView+Category */,
 				18A2B7642228C19000E30D35 /* UITextField+Category */,
 				18A2B7522227D8B900E30D35 /* NSString+Category */,
@@ -189,6 +197,24 @@
 				18A2B76B2228D45D00E30D35 /* UITextView+Category.m */,
 			);
 			path = "UITextView+Category";
+			sourceTree = "<group>";
+		};
+		18A2B7702229010F00E30D35 /* UIColor+Category */ = {
+			isa = PBXGroup;
+			children = (
+				18A2B76D2229010900E30D35 /* UIColor+Category.h */,
+				18A2B76E2229010900E30D35 /* UIColor+Category.m */,
+			);
+			path = "UIColor+Category";
+			sourceTree = "<group>";
+		};
+		18A2B7742229034500E30D35 /* UIImage+Category */ = {
+			isa = PBXGroup;
+			children = (
+				18A2B7712229033D00E30D35 /* UIImage+Category.h */,
+				18A2B7722229033D00E30D35 /* UIImage+Category.m */,
+			);
+			path = "UIImage+Category";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -329,6 +355,8 @@
 				18A2B7672228C1B900E30D35 /* UITextField+Category.m in Sources */,
 				18A2B75C2227DBAE00E30D35 /* SXAttribute.m in Sources */,
 				18A2B76C2228D45D00E30D35 /* UITextView+Category.m in Sources */,
+				18A2B76F2229010900E30D35 /* UIColor+Category.m in Sources */,
+				18A2B7732229033D00E30D35 /* UIImage+Category.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

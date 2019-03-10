@@ -19,8 +19,6 @@ CGFloat const Width = 10;
     [super viewDidLoad];
     
     UILabel *lb = [[UILabel alloc] initWithFrame:CGRectMake(20, 100, self.view.frame.size.width - 40, 30)];
-    lb.font = [UIFont systemFontOfSize:16];
-    lb.textColor = UIColor.orangeColor;
     [self.view addSubview:lb];
     
     NSString *str = @"积分外面佛哦我就没干嘛";
@@ -35,11 +33,11 @@ CGFloat const Width = 10;
     tf.placeholder = @"请输入";
     [self.view addSubview:tf];
     
-    UITextView *tv = [[UITextView alloc] initWithFrame:CGRectMake(20, [UIScreen mainScreen].bounds.size.height - 300, 150, 80)];
+    UITextView *tv = [[UITextView alloc] initWithFrame:CGRectMake(20, [UIScreen mainScreen].bounds.size.height - 300, [UIScreen mainScreen].bounds.size.width - 40, 80)];
     [tv setPlaceholder:@"请输入标题"];
     [tv setNumberLabelWithNumber:50];
     tv.font = [UIFont systemFontOfSize:16];
-    tv.backgroundColor = UIColor.orangeColor;
+//    tv.backgroundColor = UIColor.orangeColor;
     [self.view addSubview:tv];
     
     

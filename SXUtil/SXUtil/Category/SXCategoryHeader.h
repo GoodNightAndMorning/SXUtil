@@ -12,3 +12,4 @@
 #import "UITextView+Category.h"
 #import "UIColor+Category.h"
 #import "UIImage+Category.h"
+#import "NSDate+Category.h"

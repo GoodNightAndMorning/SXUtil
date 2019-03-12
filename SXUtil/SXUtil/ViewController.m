@@ -6,9 +6,10 @@
 //  Copyright © 2019年 zsx. All rights reserved.
 //
 
+//测试类
+
 #import "ViewController.h"
-#import "Test.h"
-#import "SXCategoryHeader.h"
+#import "SXUtil.h"
 @interface ViewController ()
 
 @end
@@ -17,8 +18,8 @@ CGFloat const Width = 10;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    UILabel *lb = [[UILabel alloc] initWithFrame:CGRectMake(20, 100, self.view.frame.size.width - 40, 30)];
+
+    UILabel *lb = [[UILabel alloc] initWithFrame:CGRectMake(20, 100, self.view.frame.size.width - 40, 35)];
     [self.view addSubview:lb];
     
     NSString *str = @"积分外面佛哦我就没干嘛";

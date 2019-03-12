@@ -17,7 +17,6 @@
 		18A2B72F2227CDF200E30D35 /* SXUtilTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A2B72E2227CDF200E30D35 /* SXUtilTests.m */; };
 		18A2B73A2227CDF200E30D35 /* SXUtilUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A2B7392227CDF200E30D35 /* SXUtilUITests.m */; };
 		18A2B75C2227DBAE00E30D35 /* SXAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A2B75B2227DBAE00E30D35 /* SXAttribute.m */; };
-		18A2B75F2227DEAC00E30D35 /* Test.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A2B75E2227DEAC00E30D35 /* Test.m */; };
 		18A2B7622228BD3700E30D35 /* NSString+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A2B7612228BD3700E30D35 /* NSString+Category.m */; };
 		18A2B7672228C1B900E30D35 /* UITextField+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A2B7662228C1B900E30D35 /* UITextField+Category.m */; };
 		18A2B76C2228D45D00E30D35 /* UITextView+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A2B76B2228D45D00E30D35 /* UITextView+Category.m */; };
@@ -46,6 +45,7 @@
 /* Begin PBXFileReference section */
 		077D62222234E3F200E07124 /* NSDate+Category.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDate+Category.h"; sourceTree = "<group>"; };
 		077D62232234E3F200E07124 /* NSDate+Category.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Category.m"; sourceTree = "<group>"; };
+		1896A0EF2237B455007DEA08 /* SXUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SXUtil.h; sourceTree = "<group>"; };
 		18A2B7122227CDF200E30D35 /* SXUtil.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SXUtil.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18A2B7152227CDF200E30D35 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		18A2B7162227CDF200E30D35 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -64,8 +64,6 @@
 		18A2B73B2227CDF200E30D35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18A2B75A2227DBAE00E30D35 /* SXAttribute.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SXAttribute.h; sourceTree = "<group>"; };
 		18A2B75B2227DBAE00E30D35 /* SXAttribute.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SXAttribute.m; sourceTree = "<group>"; };
-		18A2B75D2227DEAC00E30D35 /* Test.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Test.h; sourceTree = "<group>"; };
-		18A2B75E2227DEAC00E30D35 /* Test.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Test.m; sourceTree = "<group>"; };
 		18A2B7602228BD3700E30D35 /* NSString+Category.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Category.h"; sourceTree = "<group>"; };
 		18A2B7612228BD3700E30D35 /* NSString+Category.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+Category.m"; sourceTree = "<group>"; };
 		18A2B7632228BDBF00E30D35 /* SXStringCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SXStringCategory.h; sourceTree = "<group>"; };
@@ -143,8 +141,7 @@
 				18A2B7162227CDF200E30D35 /* AppDelegate.m */,
 				18A2B7182227CDF200E30D35 /* ViewController.h */,
 				18A2B7192227CDF200E30D35 /* ViewController.m */,
-				18A2B75D2227DEAC00E30D35 /* Test.h */,
-				18A2B75E2227DEAC00E30D35 /* Test.m */,
+				1896A0EF2237B455007DEA08 /* SXUtil.h */,
 				18A2B7472227CE4700E30D35 /* Category */,
 				18A2B71B2227CDF200E30D35 /* Main.storyboard */,
 				18A2B71E2227CDF200E30D35 /* Assets.xcassets */,
@@ -378,7 +375,6 @@
 				18A2B7622228BD3700E30D35 /* NSString+Category.m in Sources */,
 				18A2B71A2227CDF200E30D35 /* ViewController.m in Sources */,
 				18A2B7252227CDF200E30D35 /* main.m in Sources */,
-				18A2B75F2227DEAC00E30D35 /* Test.m in Sources */,
 				18A2B7172227CDF200E30D35 /* AppDelegate.m in Sources */,
 				18A2B7672228C1B900E30D35 /* UITextField+Category.m in Sources */,
 				18A2B75C2227DBAE00E30D35 /* SXAttribute.m in Sources */,
